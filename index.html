@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav-bar">
+        <h1>Library</h1>
+        <button class="addBtn" id="newBook">+ Book</button>
+        <span
+          ><svg style="width: 35px; height: 35px" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M19 2L14 6.5V17.5L19 13V2M6.5 5C4.55 5 2.45 5.4 1 6.5V21.16C1 21.41 1.25 21.66 1.5 21.66C1.6 21.66 1.65 21.59 1.75 21.59C3.1 20.94 5.05 20.5 6.5 20.5C8.45 20.5 10.55 20.9 12 22C13.35 21.15 15.8 20.5 17.5 20.5C19.15 20.5 20.85 20.81 22.25 21.56C22.35 21.61 22.4 21.59 22.5 21.59C22.75 21.59 23 21.34 23 21.09V6.5C22.4 6.05 21.75 5.75 21 5.5V19C19.9 18.65 18.7 18.5 17.5 18.5C15.8 18.5 13.35 19.15 12 20V6.5C10.55 5.4 8.45 5 6.5 5Z"
+            /></svg
+        ></span>
+      </div>
+    </header>
+    <div class="overlay" id="overlay"></div>
+    <main>
+      <div class="modal" id="modal">
+        <div class="container">
+          <div class="btn-close-modal">
+            <button id="closeModal" class="close-modal">X</button>
+          </div>
+          <form action="" method="post" id="bookForm">
+            <input type="text" placeholder=" Title" required id="title" />
+            <input type="text" placeholder=" Author" id="author" />
+            <input type="number" placeholder=" # Pages" id="pages" required />
+            <div class="isRead">
+              <label for="read">Have you read this book?</label>
+              <input type="checkbox" name="read" id="read" />
+            </div>
+            <input
+              type="submit"
+              id="submit"
+              placeholder="Add Book"
+              value="Add Book"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="library" id="book-shelf"></div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+  <footer class="git">
+    <a class="gitAcc" href="https://github.com/joshveill">Joshua Veilleux</a>
+    <a href="https://github.com/joshveill">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="black"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+        ></path>
+      </svg>
+    </a>
+  </footer>
+</html>

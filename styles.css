@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: linen;
+}
+
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 115px;
+  background-color: rgb(204, 191, 176);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  padding: 0px 30px 0px 30px;
+  align-items: center;
+}
+
+.addBtn {
+  border: none;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: inherit;
+  cursor: pointer;
+  outline: none;
+  margin: 0px 350px 0px 350px;
+}
+
+.addBtn:hover {
+  background-color: rgb(188, 168, 147);
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.library {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 50px;
+}
+
+.modal {
+  z-index: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.isRead {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  font-size: 23px;
+  font-family: inherit;
+}
+#read {
+  margin: 0;
+  width: 15%;
+}
+#submit {
+  font-size: 25px;
+}
+
+#submit:hover {
+  background-color: rgb(227, 216, 205);
+  cursor: pointer;
+}
+
+input {
+  font-size: 25px;
+  border-radius: 7px;
+  border-style: none;
+  background-color: rgb(255, 251, 245);
+  height: 80%;
+  width: 80%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 9px;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  /* padding: 35px 15px; */
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+  height: 50%;
+  border-radius: 10px;
+  background-color: rgb(204, 191, 176);
+  border-style: none;
+  padding: 0px 0px 15px 0px;
+}
+
+.btn-close-modal {
+  display: flex;
+  justify-content: flex-end;
+  height: 15%;
+  width: 100%;
+}
+
+.close-modal {
+  position: relative;
+  top: 5px;
+  right: 5px;
+  height: 10px;
+  border-style: none;
+  background-color: rgb(204, 191, 176);
+  cursor: pointer;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 7px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  line-height: 1.2;
+}
+
+.book > button {
+  width: 100%;
+  height: 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  border-style: none;
+  margin: 5px;
+}
+
+.bookRead {
+  background-color: rgba(0, 128, 0, 0.494);
+}
+
+.bookNotRead {
+  background-color: rgba(255, 0, 0, 0.495);
+}
+
+.delete {
+  background-color: lightgray;
+}
+
+.bookRead:hover {
+  background-color: rgb(0, 128, 0);
+}
+
+.bookNotRead:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.delete:hover {
+  background-color: rgb(84, 93, 103);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 3px;
+  background-color: rgb(204, 191, 176);
+}
+
+.gitAcc {
+  color: black;
+  text-decoration: none;
+}
